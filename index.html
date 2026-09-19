@@ -1449,27 +1449,8 @@
                     trips = [];
                 }
             } else {
-                // Initial sample trip if empty
-                trips = [{
-                    id: 1,
-                    tripTitle: "北海道サイクリング＆グルメ旅",
-                    startDate: "2026-10-10",
-                    endDate: "2026-10-13",
-                    daysCount: 4,
-                    schedules: [
-                        { id: 1, day: 1, time: "09:00", title: "羽田空港 出発", memo: "ANA553便", cost: 16000, category: "交通費" },
-                        { id: 2, day: 1, time: "10:35", title: "新千歳空港 到着", memo: "レンタカーの受付へ", cost: 8000, category: "交通費" },
-                        { id: 3, day: 1, time: "12:30", title: "札幌市内で味噌ラーメン", memo: "有名店へ立ち寄り", cost: 1000, category: "食費" }
-                    ],
-                    packings: [
-                        { id: 1, name: "着替え", count: 3, checked: false },
-                        { id: 2, name: "スマホ充電器", count: 1, checked: true },
-                        { id: 3, name: "常備薬", count: 1, checked: false }
-                    ],
-                    directExpenses: [
-                        { id: 101, name: "ホテル予約 (3泊)", amount: 24000, category: "宿泊費" }
-                    ]
-                }];
+                // 初回起動時は空配列で初期化
+                trips = [];
                 saveAllTrips();
             }
         }
